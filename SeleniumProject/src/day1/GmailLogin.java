@@ -1,0 +1,48 @@
+package day1;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.server.browserlaunchers.Sleeper;
+
+public class GmailLogin {
+
+	public static void main(String[] args)
+	{
+		//Launching firefox browser
+		FirefoxDriver driver=new FirefoxDriver();
+		//Launch gmail application
+		driver.get("http://gmail.com");
+		//maximizing the window
+		driver.manage().window().maximize();
+
+		//Implicit Wait
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+		
+		//Identifying the email text box
+		WebElement email=driver.findElement(By.id("identifierId"));
+		
+		//clicking on email textbox
+//		email.click();
+		
+		//Sending text into email textbox
+		email.sendKeys("testingtoolstrainer449@gmail.com");
+		
+		//Clear the text in the textbox
+//		email.clear();
+		
+		//Clicking on next button
+		driver.findElement(By.xpath(".//*[@id='identifierNext']/content/span")).click();
+		
+//		Sleeper.sleepTightInSeconds(10);
+		
+		//Entering password into password textbox
+		driver.findElement(By.name("password")).sendKeys("123456789");
+		
+		//Clicking on next button
+		driver.findElement(By.cssSelector(".RveJvd.snByac")).click();
+	}
+
+}

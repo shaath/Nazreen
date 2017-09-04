@@ -1,0 +1,25 @@
+package day1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class GmailLogin {
+
+	public static void main(String[] args)
+	{
+		//Launching firefox browser
+		FirefoxDriver driver=new FirefoxDriver();
+		//Launch gmail application
+		driver.get("http://gmail.com");
+		//maximizing the window
+		driver.manage().window().maximize();
+
+		//Identifying the email text box
+		WebElement email=driver.findElement(By.id("identifierId"));
+		
+		//Sending text into email textbox
+		email.sendKeys("testingtoolstrainer449@gmail.com");
+	}
+
+}

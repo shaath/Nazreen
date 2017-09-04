@@ -1,0 +1,13 @@
+package driverScripts;
+
+import java.io.FileInputStream;
+
+public class Keyword_Script 
+{
+	public static void main(String[] args) 
+	{
+		FileInputStream fi=new FileInputStream(arg0)
+		
+	}
+
+}

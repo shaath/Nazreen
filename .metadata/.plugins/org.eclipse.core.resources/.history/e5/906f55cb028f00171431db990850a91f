@@ -1,0 +1,18 @@
+package driverScripts;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Keyword_Script 
+{
+	public static void main(String[] args) throws FileNotFoundException 
+	{
+		String xlpath="F:\\Nazreen\\Nazreen\\SeleniumProject\\src\\testdata\\Keyword.xlsx";
+		FileInputStream fi=new FileInputStream(xlpath);
+		
+		XSSFWorkbook wb=new XSSFWorkbook(fi);
+	}
+
+}

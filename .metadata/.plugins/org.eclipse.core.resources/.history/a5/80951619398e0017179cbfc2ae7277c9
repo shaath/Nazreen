@@ -1,0 +1,12 @@
+package methods;
+
+public class LoginTC {
+
+	public static void main(String[] args)
+	{
+		OrgHRM om=new OrgHRM();
+		
+
+	}
+
+}

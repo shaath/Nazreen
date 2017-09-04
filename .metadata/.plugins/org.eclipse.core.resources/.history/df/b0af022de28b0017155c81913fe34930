@@ -1,0 +1,20 @@
+package day2;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TakesScreenshotEg {
+
+	public static void main(String[] args)
+	{
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.facebook.com/");
+		
+		((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE)
+		
+
+	}
+
+}
